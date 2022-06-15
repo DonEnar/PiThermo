@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkWindow" id="window1">
+    <property name="width-request">320</property>
+    <property name="height-request">600</property>
+    <property name="can-focus">False</property>
+    <signal name="delete-event" handler="DeleteWindow" swapped="no"/>
+    <signal name="size-allocate" handler="SizeChanged" swapped="no"/>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <child>
+          <object class="GtkButton">
+            <property name="label" translatable="yes">Termometer suchen</property>
+            <property name="width-request">300</property>
+            <property name="height-request">30</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <signal name="clicked" handler="SearchThermo" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkTextView" id="TextView1">
+            <property name="name">TextView1</property>
+            <property name="width-request">300</property>
+            <property name="height-request">100</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">50</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkDrawingArea" id="DrawArea">
+            <property name="width-request">300</property>
+            <property name="height-request">330</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="hexpand">True</property>
+            <signal name="configure-event" handler="ConfigEventCB" swapped="no"/>
+            <signal name="draw" handler="DrawCB" swapped="no"/>
+            <signal name="map-event" handler="on_DrawArea_map_event" swapped="no"/>
+            <signal name="size-allocate" handler="on_DrawArea_size_allocate" swapped="no"/>
+          </object>
+          <packing>
+            <property name="x">10</property>
+            <property name="y">160</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
